@@ -1,0 +1,28 @@
+<view>
+  <view class="top_tip">UPDATE_TIME：{{update_time}}</view>
+  <view class="top_tip">BUFFETT_INDEX：{{buffett_index}}</view>
+  <view class="top_tip">10_YEAR_BOND_YIELD：{{ten_year_bond_yield}}</view>
+  <view class="code_box">
+    <view class="code_box_record">
+      <view class="code_box_record_title">NAME</view>
+      <view class="code_box_record_title">ROE</view>
+      <view class="code_box_record_title">PE</view>
+      <view class="code_box_record_title">PE%</view>
+      <view class="code_box_record_title">PB</view>
+      <view class="code_box_record_title">PB%</view>
+      <view class="code_box_record_title">YIELD%</view>
+    </view>
+    <view class="line"></view>
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view class="code_box_record_detail">{{item.name}}</view>
+      <view class="code_box_record_detail">{{item.roe}}%</view>
+      <view class="code_box_record_detail">{{item.pe}}</view>
+      <view class="code_box_record_detail">{{item.pep}}%</view>
+      <view class="code_box_record_detail">{{item.pb}}</view>
+      <view class="code_box_record_detail">{{item.pbp}}%</view>
+      <view class="code_box_record_detail">{{item.yield_ratio}}%</view>
+    </view>
+  </view>
+  <view class="button" bindtap="updateRecord">获取最新数据</view>
+  <view class="tip">当前只支持最新数据的刷新和展示，暂不支持历史数据查询和展示</view>
+</view>
